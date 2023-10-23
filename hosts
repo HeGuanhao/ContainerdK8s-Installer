@@ -1,0 +1,19 @@
+192.168.40.181 node_name=master01 password=test123456
+192.168.40.182 node_name=worker01 password=test123456
+192.168.40.183 node_name=worker02 password=test123456
+
+[master]
+192.168.40.181
+
+[node]
+192.168.40.182
+192.168.40.183
+
+[etcd]
+192.168.40.181
+192.168.40.182
+192.168.40.183
+
+[k8s:children]
+master
+node

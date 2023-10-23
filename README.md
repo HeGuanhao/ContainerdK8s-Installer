@@ -20,3 +20,96 @@ With ContainerdK8s-Installer, you can swiftly set up and manage production-ready
 
 Start using ContainerdK8s-Installer today and enjoy efficient, reliable, and easily maintainable Kubernetes clusters!
 
+
+
+## Records:
+
+Find the corresponding image version from the Docker image repository：
+
+```
+sudo apt-get install jq/sudo yum install jq
+
+curl -s https://registry.hub.docker.com/v2/repositories/ansible/ansible/tags?page_size=100 | jq -r '.results[].name'
+ubuntu1404
+ubuntu1604py3
+ubuntu1604
+httptester
+default
+fedora27py3
+fedora26py3
+vcenter-simulator
+opensuse42.3
+opensuse42.2
+fedora25py3
+opensuse42.1
+ubuntu1204
+centos7
+centos6
+fedora25
+fedora24
+cloudstack-simulator
+opensuseleap
+fedora23
+fedora-rawhide
+
+curl -s https://registry.hub.docker.com/v2/repositories/library/registry/tags?page_size=100 | jq -r '.results[].name'
+latest
+2.8.3
+2.8
+2
+2.8.2
+2.8.2-beta.2
+2.8.1
+2.8.0
+2.8.0-beta.1
+2.7.1
+2.7
+2.6.2
+2.6
+2.5.2
+2.5
+2.7.0
+2.6.1
+2.6.1-rc.2
+2.6.0
+2.6.0-rc.2
+2.5.1
+2.6.0-rc.1
+2.5.0
+2.5.0-rc.2
+2.4.1
+2.4
+2.5.0-rc.1
+2.4.0
+2.3.1
+2.3
+2.3.0
+2.2.1
+2.2
+0.9.1
+0.8.1
+2.2.0
+0.6.1
+0.6.6
+0.6.8
+0.6.9
+0.7.1
+0.7.0
+0.8.0
+0.6.0
+0.9.0
+0.7.3
+0.6.2
+0.7.2
+0.5.9
+0.6.5
+0.6.3
+0.6.7
+0.6.4
+2.1.1
+2.1
+2.0
+2.0.0
+2.0.1
+```
+
