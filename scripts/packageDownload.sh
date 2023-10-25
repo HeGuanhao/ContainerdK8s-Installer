@@ -10,6 +10,7 @@ if [[ -f "./roles/plugins/jq" ]]; then
 else
     echo ———————————————————— Downloading jq related files ——————————————————————
     ./roles/plugins/package.sh
+    echo ———————————————————— jq download completed ——————————————————————
 fi
 
 if which ctr &> /dev/null; then
@@ -17,6 +18,8 @@ if which ctr &> /dev/null; then
 else
     echo ———————————————————— Downloading containerd related files ——————————————————————
     ./roles/containerd/package.sh
+    echo ———————————————————— Containerd download completed ——————————————————————
+
 fi
 
 if [[ -f "./roles/cfssl/cfssl-scan" ]]; then
@@ -24,6 +27,7 @@ if [[ -f "./roles/cfssl/cfssl-scan" ]]; then
 else
     echo ———————————————————— Downloading cfssl related files ——————————————————————
     ./roles/cfssl/package.sh
+    echo ———————————————————— Cfssl download completed ——————————————————————
 fi
 
 if [[ -f "./roles/calico/calicoctl" ]]; then
@@ -31,6 +35,7 @@ if [[ -f "./roles/calico/calicoctl" ]]; then
 else
     echo ———————————————————— Downloading calico related files ——————————————————————
     ./roles/calico/package.sh
+    echo ———————————————————— Calico download completed ——————————————————————
 fi
 
 

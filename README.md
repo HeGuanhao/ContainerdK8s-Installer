@@ -24,6 +24,13 @@ Start using ContainerdK8s-Installer today and enjoy efficient, reliable, and eas
 
 ## Records:
 
+Testing environment:
+
+```
+cat /etc/centos-release
+CentOS Linux release 7.6.1810 (Core) 
+```
+
 Find the corresponding image version from the Docker image repository：
 
 ```
@@ -111,5 +118,11 @@ latest
 2.0
 2.0.0
 2.0.1
+```
+
+To run the script smoothly, it is necessary to manually assign permissions to the shell script:
+
+```
+find . -path \*.sh -execdir pwd \; | while read path; do cd $path && chmod +x *.sh; done
 ```
 
