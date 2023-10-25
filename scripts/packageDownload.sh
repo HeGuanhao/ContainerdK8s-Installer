@@ -3,9 +3,9 @@
 set -e
 
 # Source the utils.sh script
-source ./utils.sh
+source ./scripts/utils.sh
 
-if [[ -f "../roles/plugins/jq" ]]; then
+if [[ -f "./roles/plugins/jq" ]]; then
     echo ———————————————————— Jq exists ——————————————————————
 else
     echo ———————————————————— Downloading jq related files ——————————————————————
@@ -19,14 +19,14 @@ else
     ./roles/containerd/package.sh
 fi
 
-if [[ -f "../roles/cfssl/cfssl-scan" ]]; then
+if [[ -f "./roles/cfssl/cfssl-scan" ]]; then
     echo ———————————————————— Cfssl exists ——————————————————————
 else
     echo ———————————————————— Downloading cfssl related files ——————————————————————
     ./roles/cfssl/package.sh
 fi
 
-if [[ -f "../roles/calico/calicoctl" ]]; then
+if [[ -f "./roles/calico/calicoctl" ]]; then
     echo ———————————————————— Calico exists ——————————————————————
 else
     echo ———————————————————— Downloading calico related files ——————————————————————
