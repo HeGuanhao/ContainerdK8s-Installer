@@ -2,7 +2,7 @@
 
 set -e
 
-source ../scripts/utils.sh
+source ./scripts/utils.sh
 
 yum install -y containerd --downloaddir . --downloadonly
 

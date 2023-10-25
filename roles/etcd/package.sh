@@ -2,7 +2,7 @@
 
 set -e
 
-source ../scripts/utils.sh
+source ./scripts/utils.sh
 
 etcd_version=$(getVersion "etcd")
 

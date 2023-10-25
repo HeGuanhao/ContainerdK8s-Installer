@@ -2,7 +2,7 @@
 
 set -e
 
-source ../scripts/utils.sh
+source ./scripts/utils.sh
 
 yum install -y kubeadm-${version}-00 --downloaddir . --downloadonly
 yum install -y kubectl-${version}-00 --downloaddir . --downloadonly

@@ -4,10 +4,10 @@ set -e
 set -x
 
 # Source the utils.sh script
-source ./utils.sh
+source ./scripts/utils.sh
 
 # create docker registry file directory
-mkdir -p ../registry/var/lib/registry
+mkdir -p ./registry/var/lib/registry
 
 # Get docker-registry version from version.ini file
 registry_version=$(getVersion "docker-registry")
