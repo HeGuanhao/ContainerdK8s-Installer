@@ -42,7 +42,7 @@ if which kubelet &> /dev/null; then
     echo ———————————————————— Kubernetes exists ——————————————————————
 else
     echo ———————————————————— Downloading kubernetes related files ——————————————————————
-    ./roles/calico/package.sh
+    ./roles/kubernetes/package.sh
     echo ———————————————————— kubernetes download completed ——————————————————————
 fi
 
