@@ -6,9 +6,9 @@ source ./scripts/utils.sh
 
 kubernetes_version=$(getVersion "kubernetes")
 
-yum install -y kubeadm-${kubernetes_version}-00 --downloaddir ./roles/kubernetes/ --downloadonly
-yum install -y kubectl-${kubernetes_version}-00 --downloaddir ./roles/kubernetes/ --downloadonly
-yum install -y kubelet-${kubernetes_version}-00 --downloaddir ./roles/kubernetes/ --downloadonly
+yum install -y kubeadm-${kubernetes_version} --downloaddir ./roles/kubernetes/ --downloadonly --disableexcludes=kubernetes
+yum install -y kubectl-${kubernetes_version} --downloaddir ./roles/kubernetes/ --downloadonly --disableexcludes=kubernetes
+yum install -y kubelet-${kubernetes_version} --downloaddir ./roles/kubernetes/ --downloadonly --disableexcludes=kubernetes
 yum install -y ipvsadm --downloaddir ./roles/kubernetes/ --downloadonly
 
 yum install -y *.rpm
