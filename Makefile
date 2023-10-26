@@ -1,4 +1,4 @@
-ARCH ?= all
+ARCH ?= amd64
 
 prepare:
 	@set -e; \
