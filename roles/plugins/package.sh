@@ -9,6 +9,8 @@ skopeo_version=$(getVersion "skopeo")
 
 curl -L https://github.com/jqlang/jq/releases/download/jq-1.7/jq-linux-${ARCH} -o ./roles/plugins/jq
 
+yum install -y skopeo --downloaddir ./roles/plugins/ --downloadonly
 
-curl -L https://github.com/containers/skopeo/archive/refs/tags/v${skopeo_version}.tar.gz | tar -xz && mv skopeo-${skopeo_version} ./roles/plugins/skopeo
+yum install -y ./roles/plugins/*.rpm
+#curl -L https://github.com/containers/skopeo/archive/refs/tags/v${skopeo_version}.tar.gz | tar -xz && mv skopeo-${skopeo_version} ./roles/plugins/skopeo
 

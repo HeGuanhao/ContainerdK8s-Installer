@@ -16,13 +16,16 @@ registry_version=$(getVersion "docker-registry")
 echo "pulling image: docker.io/library/registry:$registry_version"
 ./scrpits/imagePuller.sh -i "docker.io/library/registry:$registry_version"
 
-# while IFS= read -r image_name
-# do
-#     ./scrpits/imagePuller.sh -i "$image_name"
-# done < "./roles/calico/images/calico.txt"
+if ! ctr task ls | grep -q 'registry'; then
+    ctr run -n k8s.io -d --net-host --mount type=bind,src=/data/docker.registry/var/lib/registry,dst=/var/lib/registry docker.io/library/registry:$registry_version
+fi
 
-# while IFS= read -r image_name
-# do
-#     ./scrpits/imagePuller.sh -i "$image_name"
-# done < "./roles/kubernetes/images/kubernetes.txt"
+while IFS= read -r image_name
+do
+    ./scrpits/skopeo.sh -i "$image_name"
+done < "./roles/calico/images/calico.txt"
 
+while IFS= read -r image_name
+do
+    ./scrpits/skopeo.sh -i "$image_name"
+done < "./roles/kubernetes/images/kubernetes.txt"
