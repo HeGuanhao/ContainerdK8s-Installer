@@ -126,3 +126,28 @@ To run the script smoothly, it is necessary to manually assign permissions to th
 find . -path \*.sh -execdir pwd \; | while read path; do cd $path && chmod +x *.sh; done
 ```
 
+------
+
+Compile skopeo：
+
+download go1.19
+
+```
+rpm --import https://mirror.go-repo.io/centos/RPM-GPG-KEY-GO-REPO
+curl -s https://mirror.go-repo.io/centos/go-repo.repo | tee /etc/yum.repos.d/go-repo.repo
+yum install golang -y
+go version
+```
+
+```
+git clone https://github.com/containers/skopeo $GOPATH/src/github.com/containers/skopeo
+cd $GOPATH/src/github.com/containers/skopeo && make bin/skopeo
+```
+
+
+
+```
+#git clone https://github.com/containers/skopeo.git
+curl -L https://github.com/containers/skopeo/archive/refs/tags/v1.13.3.tar.gz | tar -xz && mv skopeo-1.13.3 skopeo
+```
+

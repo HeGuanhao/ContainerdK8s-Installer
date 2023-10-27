@@ -10,7 +10,7 @@ if [ ! -f "$repo_file" ]; then
 name=Docker CE Stable - \$basearch
 baseurl=https://mirrors.aliyun.com/docker-ce/linux/centos/\$releasever/\$basearch/stable
 enabled=1
-gpgcheck=1
+gpgcheck=0
 gpgkey=https://mirrors.aliyun.com/docker-ce/linux/centos/gpg
 EOF
     echo "docker-ce.repo file added successfully."
