@@ -39,7 +39,7 @@ fi
 
 if which ctr &> /dev/null; then
     echo "pull image via ctr: $image"
-        ctr image pull  "$image" --skip-verify
+        ctr -n k8s.io image pull  "$image" --skip-verify
     exit 0
 fi
 
