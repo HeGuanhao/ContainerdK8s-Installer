@@ -43,6 +43,21 @@ if which kubelet &> /dev/null; then
 else
     echo ———————————————————— Downloading kubernetes related files ——————————————————————
     ./roles/kubernetes/package.sh
-    echo ———————————————————— kubernetes download completed ——————————————————————
+    echo ———————————————————— Kubernetes download completed ——————————————————————
 fi
 
+if which haproxy &> /dev/null; then
+    echo ———————————————————— Haproxy exists ——————————————————————
+else
+    echo ———————————————————— Downloading haproxy related files ——————————————————————
+    ./roles/haproxy/package.sh
+    echo ———————————————————— Haproxy download completed ——————————————————————
+fi
+
+if which keepalived &> /dev/null; then
+    echo ———————————————————— Keepalived exists ——————————————————————
+else
+    echo ———————————————————— Downloading keepalived related files ——————————————————————
+    ./roles/keepalived/package.sh
+    echo ———————————————————— Keepalived download completed ——————————————————————
+fi
